@@ -1,0 +1,70 @@
+var_dump($myvar); ////Te da el tipo y numero caract. de la variable
+– Hay 2 formas adicionales llamadas Heredoc y Nowdoc que sirven para crear cadenas de múltiples líneas.
+
+
+///////////////////////////// Arrays
+<?php
+$array = array(
+    "curso1" => "php",
+    "curso2" => "js",
+);
+
+// a partir de PHP 5.4
+$array = [
+    "curso1" => "php",
+    "curso2" => "js",
+];
+
+// índices numéricos
+$array = [
+    "php",
+    "js",
+];
+?>
+
+
+///////////////////////////// OBJETOS
+<?php
+class Car
+{
+    function move()
+    {
+        echo "Going forward..."; 
+    }
+}
+
+$myCar = new Car();
+$myCar->move();
+?>
+
+
+
+///////////////////////////// Variable que guarda un callable
+$firstOfArray = function(array $array) {
+    if (count($array) == 0) { return null; }
+    return $array[0];
+};
+
+// Este es nuestro arreglo
+$values = [3, 2, 1];
+
+// Usamos nuestro callable y se imprime el valor 3
+echo $firstOfArray($values);
+
+
+///////////////////////////// For
+
+function foo(iterable $iterable) {
+    foreach ($iterable as $valor) {
+        // ...
+    } 
+}
+
+
+
+
+
+
+
+
+
